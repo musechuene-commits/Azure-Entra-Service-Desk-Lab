@@ -1,171 +1,226 @@
-# Azure Entra ID Service Desk Lab
+# ☁️ Azure Entra Service Desk Lab
 
-## Project Overview
+## 📌 Project Overview
 
-This project simulates a real-world IT Support / Service Desk environment using Microsoft Entra ID (Azure AD), Azure Cloud Shell, PowerShell, and Azure CLI automation.
+Azure Entra Service Desk Lab is a hands-on cloud identity and access management project designed to simulate real-world IT service desk and system administration operations within a 100-user enterprise environment.
 
-The lab demonstrates:
-- User onboarding
-- Identity and Access Management (IAM)
-- Group-based access control
-- Password reset administration
-- Automated user provisioning
-- Automated group assignment
-- User offboarding
-- Azure cloud administration
-
-This project was built to simulate enterprise IT administration tasks performed by:
-- IT Support Technicians
-- Service Desk Analysts
-- Azure Administrators
-- Junior System Administrators
-- IAM Administrators
-
----
-
-# Technologies Used
+This project demonstrates practical experience with:
 
 - Microsoft Entra ID (Azure AD)
-- Azure Cloud Shell
-- PowerShell
-- Azure CLI
-- Microsoft Graph
-- Windows 11
+- User lifecycle management
+- Role-Based Access Control (RBAC)
+- PowerShell automation
+- Azure CLI administration
+- Security group management
+- Automated onboarding and offboarding
+- Identity and access administration workflows
+
+The lab simulates a company environment where IT administrators manage users, departments, permissions, and access requests through automated administrative processes.
 
 ---
 
-# Project Structure
+# 🎯 Project Objectives
+
+The primary objective of this lab is to simulate enterprise-level service desk administration tasks including:
+
+- Creating and managing users
+- Assigning department-based access
+- Managing security groups
+- Automating onboarding workflows
+- Automating offboarding processes
+- Performing password and access management
+- Managing cloud identities using Microsoft Entra ID
+
+---
+
+# 🏢 Simulated Company Environment
+
+The environment simulates a company with approximately 100 employees distributed across multiple departments.
+
+| Department | Simulated Users |
+|---|---|
+| IT | 10 |
+| HR | 10 |
+| Finance | 15 |
+| Sales | 45 |
+| Operations | 15 |
+| Management | 5 |
+
+---
+
+# 🔐 Security Groups Configured
+
+The following security groups were created to simulate enterprise RBAC access management:
+
+- IT-Access
+- HR-Access
+- Finance-Access
+- Sales-Access
+- Operations-Access
+- Management-Access
+- All-Employees
+
+---
+
+# ⚙️ Features Implemented
+
+## ✅ User Administration
+- Manual user creation
+- Bulk user provisioning
+- User lifecycle management
+- Department-based user organization
+
+## ✅ Access Control
+- RBAC security group implementation
+- Group membership assignment
+- Department-level access management
+
+## ✅ PowerShell Automation
+- Automated onboarding scripts
+- Bulk user creation scripts
+- Group assignment automation
+- Offboarding automation
+
+## ✅ Azure Administration
+- Microsoft Entra ID management
+- Azure Cloud Shell usage
+- Azure CLI administration
+- Identity and access management
+
+---
+
+# 🧰 Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| Microsoft Entra ID | Identity & Access Management |
+| PowerShell | Administrative automation |
+| Azure CLI | Cloud administration |
+| Azure Portal | User & group management |
+| GitHub | Version control & documentation |
+
+---
+
+# 📂 Project Structure
 
 ```text
 Azure-Entra-Service-Desk-Lab
 │
+├── docs
+│   ├── setup-guide.md
+│   ├── service-desk-scenarios.md
+│   └── user-onboarding-workflow.md
+│
 ├── scripts
-│   ├── create-100-users.ps1
-│   ├── assign-users-to-groups.ps1
+│   ├── create-users.ps1
+│   ├── bulk-onboarding.ps1
+│   ├── assign-groups.ps1
+│   ├── reset-password.ps1
 │   └── offboard-user.ps1
 │
 ├── screenshots
+│   ├── entra-id-overview.png
+│   ├── security-groups-created.png
+│   ├── manual-user-onboarding.png
+│   ├── powershell-user-automation.png
+│   └── automated-onboarding-results.png
 │
-├── docs
-│
-└── README.md
+├── README.md
+├── LICENSE
+└── .gitignore
+```
 
-Features Implemented
-Manual User Provisioning
+---
 
-Created organizational users manually:
+# 🚀 PowerShell Automation Scripts
 
-John IT
-Sarah HR
-Mike Finance
-Linda Sales
-David Ops
+## Bulk User Creation
+Automates onboarding of multiple users into Microsoft Entra ID.
 
-Configured:
+## Group Assignment Automation
+Automatically assigns users to department security groups.
 
-Departments
-Job titles
-Group assignments
-Password reset scenarios
-Security Groups Created
-IT-Access
-HR-Access
-Finance-Access
-Sales-Access
-Operations-Access
-Management-Access
-All-Employees
-Automated User Provisioning
+## Offboarding Automation
+Disables or removes users from groups during employee termination workflows.
 
-Used Azure CLI automation in Azure Cloud Shell to:
+## Password Reset Automation
+Simulates service desk password reset operations.
 
-Create multiple users automatically
-Generate User Principal Names (UPNs)
-Assign passwords
-Simulate enterprise onboarding
+---
 
-Example automated users:
+# 🖥️ Screenshots
 
-Alice IT
-Brian HR
-Chris Finance
-Diana Sales
-Ethan Ops
-Automated Group Assignment
+## Microsoft Entra ID Overview
 
-Implemented automated group membership assignment using Azure CLI.
+![Entra Overview](screenshots/entra-id-overview.png)
 
-Users were automatically assigned to:
+---
 
-IT-Access
-HR-Access
-Finance-Access
-Sales-Access
-Operations-Access
-Offboarding Simulation
+## Manual User Onboarding
 
-Simulated employee termination/offboarding:
+![Manual Onboarding](screenshots/manual-user-onboarding.png)
 
-Disabled user accounts
-Removed group access
-Verified access revocation
-Automation Example
-az ad user create `
-    --display-name "Alice IT" `
-    --user-principal-name "alice.it@musechuenegmail.onmicrosoft.com" `
-    --password "P@ssword12345!" `
-    --mail-nickname "aliceit" `
-    --force-change-password-next-sign-in true
-Skills Demonstrated
-IT Support Skills
-User provisioning
-Password resets
-Group management
-Access control
-User lifecycle management
-Help desk administration
-Cloud & Automation Skills
-Azure administration
-Microsoft Entra ID
-PowerShell scripting
-Azure CLI automation
-IAM administration
-Cloud Shell operations
-Screenshots
-Azure User Management
+---
 
-(Add screenshots here)
+## Security Group Configuration
 
-Automated User Provisioning
+![Security Groups](screenshots/security-groups-created.png)
 
-(Add screenshots here)
+---
 
-Group Assignment
+## PowerShell User Automation
 
-(Add screenshots here)
+![PowerShell Automation](screenshots/powershell-user-automation.png)
 
-Offboarding Simulation
+---
 
-(Add screenshots here)
+## Automated Onboarding Results
 
-Key Learning Outcomes
-Learned how enterprise identity systems are managed
-Automated user onboarding using Azure CLI
-Implemented group-based access control
-Simulated IT service desk workflows
-Practiced cloud administration in Microsoft Azure
-Improved PowerShell and automation skills
-Future Improvements
-Multi-Factor Authentication (MFA)
-Conditional Access Policies
-Intune Device Management
-Automated password rotation
-Ticketing system integration
-Logging and monitoring
-Author
-Musa Chuene
-LinkedIn: https://linkedin.com/in/musa-chuene-57a4461a8
-GitHub: https://github.com/musechuene-commits
-Disclaimer
+![Automation Results](screenshots/automated-onboarding-results.png)
 
-This project was created for educational and portfolio purposes only in a controlled Azure lab environment.
+---
+
+# 📖 Skills Demonstrated
+
+- Identity & Access Management (IAM)
+- Azure Administration
+- Microsoft Entra ID
+- PowerShell Scripting
+- RBAC Implementation
+- User Lifecycle Management
+- Cloud Administration
+- Service Desk Operations
+- IT Support Administration
+- Administrative Automation
+
+---
+
+# 💼 Career Relevance
+
+This project aligns with responsibilities commonly performed in:
+
+- IT Support
+- Service Desk
+- Junior System Administration
+- IAM Administration
+- Cloud Administration
+- SOC Analyst (L1)
+- Azure Administration Roles
+
+---
+
+# ⚠️ Disclaimer
+
+This project was created for educational and portfolio purposes only.  
+No production tenant or sensitive organizational data was used.
+
+---
+
+# 👨‍💻 Author
+
+## Musa Chuene
+
+- LinkedIn: https://linkedin.com/in/musa-chuene-57a4461a8
+- GitHub: https://github.com/musechuene-commits/Azure-Entra-Service-Desk-Lab
+
+```
